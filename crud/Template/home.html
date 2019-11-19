@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+{% extends 'base.html' %}
+
+{% block title %}Home{% endblock %}
+
+{% block content %}
+{% if user.is_authenticated %}
+  Hi {{ user.username }}! Welcome to ConsultAdd
+    <html lang="en">
+      <<h1> Ch 6 of Bhagavad Gita </h1>
+      <p1>Contents: {{name1}} </p1>
+      </body>
+      <body>
+      <h1>{{name}}</h1>h1>
+      </body>
+      <body>
+      {{name2}}
+      <h2> ConsultAdd</h2>
+      </body>
+    <button type="Create">Create User</button>
+    </html>
+  <p><a href="{% url 'logout' %}">logout</a></p>
+{% else %}
+  <p>You are not logged in</p>
+  <a href="{% url 'login' %}">login</a>
+{% endif %}
+{% endblock %}
